@@ -77,8 +77,6 @@ namespace seminarska
             stopwatch.Stop();
             Console.WriteLine("Possible triangles: " + res);
             Console.WriteLine("Execution Time: " + stopwatch.Elapsed.TotalMilliseconds + "ms");
-            Console.WriteLine("commit test");
-
         }
 
         public static IEnumerable<IEnumerable<string>> GetAllPossibleCombos(IEnumerable<IEnumerable<string>> strings)
