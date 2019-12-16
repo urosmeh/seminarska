@@ -17,7 +17,7 @@ namespace seminarska
             int La, Lb, Lc;
             string triangleVals = "";
             string triangleExtensions = "";
-            string path = "test1.txt";
+            string path = "pr1.txt";
 
             Console.WriteLine("Filename: ");
 
@@ -38,7 +38,8 @@ namespace seminarska
             La = int.Parse(inputString[0].ToString());
             Lb = int.Parse(inputString[1].ToString());
             Lc = int.Parse(inputString[2].ToString());
-
+            int comb = (La + 1) * (Lb + 1) * (Lc + 1);
+            Console.WriteLine("All possible triangles: " + comb.ToString());
             aLengths = new List<string>();
             bLengths = new List<string>();
             cLengths = new List<string>();
@@ -75,6 +76,8 @@ namespace seminarska
             stopwatch.Start();
             int res = countPossibleBruteForce(result);
             stopwatch.Stop();
+            
+            
             Console.WriteLine("Possible triangles: " + res);
             Console.WriteLine("Execution Time: " + stopwatch.Elapsed.TotalMilliseconds + "ms");
         }
